@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Box</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="navbar">
+        <h1> Convey Your Message</h1>
+    </div>
+
+    <div class="container">
+        <div class="msg-container">
+            <h2> Name</h2>
+           <h3>From</h3>
+            <h4>
+                (Profession)
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero distinctio labore nemo
+                 quibusdam a accusantium porro numquam ipsum doloribus tempore magni itaque pariatur 
+                 sequi, nihil, eum impedit reprehenderit deserunt sed.</p>
+                 <button onclick="deleteBtn(event)">Delete</button>
+        </div>
+</div>
+
+    <div class="popup-overlay"></div>
+
+    <div class="popup-box">
+        <h1> Add Your Message</h1>
+        <form>
+            <input type="text" placeholder="Your Name" id="name-input">
+            <input type="text" placeholder="Your From" id="from-input">
+            <input type="text" placeholder="your employnment" id="job-input">
+            <textarea placeholder="short-discription" id="message-discription-input" ></textarea>
+            <button id="add-popup">Add</button>
+            <button id="cancel-popup">Cancel</button>
+        </form>
+    </div>
+
+    <button class="add-btn" id="add-popup-btn"> + </button>
+    <script src="index.js"></script>
+</body>
+</html>
+<style>
+
+@media screen and (max-width: 768px){
+    .msg-container{
+  padding: 15px;
+  width: 90%;
+  background-color: black;
+  border-radius: 6px;
+  color: aliceblue;
+  margin: 30px;
+  margin-left: 0px;
+
+}
+
+.popup-box{
+
+background-color: goldenrod;
+margin-left: -115px!important;
+width: 82%;
+padding: 35px 30px;
+border-radius: 10px;
+position: absolute;
+z-index: 2;
+display: none;
+}
+
+
+.popup-box input{
+
+background: transparent;
+border: none;
+padding: 5px;
+margin: 5px;
+width: 85%;
+border-bottom: 2px solid black;
+font-size: 20px;
+margin-top: 5px;
+}
+
+.popup-box textarea{
+
+background: transparent;
+padding: 20px;
+
+width: 80%;
+border: 2px solid black;
+font-size: 20px;
+margin-left: 0px;
+margin-top: 10px;
+}
+
+
+}
+</style>
